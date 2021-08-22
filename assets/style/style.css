@@ -38,6 +38,10 @@ body {
   width: 700px;
 }
 
+.particles-js-canvas-el {
+  height: 100vh !important;
+}
+
 .container {
   position: relative;
   -ms-perspective: 800px;
