@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #9e928125;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4b07e;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c59758;
+  border-radius: 100px;
+}
+:root {
+  --main-color: #dec29b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+html {
+  scroll-behavior: smooth !important;
+  min-height: 100% !important;
+}
+
+body {
+  background-color: #1d1d1d;
+  color: var(--main-color);
+  margin: 0 auto;
+  min-height: 70%;
+  overflow: hidden;
+}
+
+.card img {
+  width: 700px;
+}
+
+.container {
+  position: relative;
+  -ms-perspective: 800px;
+  perspective: 800px;
+  border-radius: 4px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  max-height: 420px;
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card section {
+  position: absolute;
+  max-height: 420px;
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  background: #fff;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -o-box-pack: center;
+  justify-content: center;
+  -o-box-align: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.8);
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card .front {
+  display: flex;
+  flex-direction: column;
+  background-color: #1d1d1d;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.name svg {
+  max-width: 300px;
+  width: 90%;
+}
+
+.front .job {
+  font-size: 17px;
+  margin-top: -5px;
+  text-align: center;
+}
+
+.front .location {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.front p {
+  font-weight: 300;
+}
+
+.front .qr {
+  margin-top: 10px;
+  transition: 300ms ease-in-out;
+}
+
+.front .qr:hover {
+  transform: scale(1.05);
+}
+
+.qr svg {
+  width: 150px;
+}
+
+.card .back {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #1d1d1d;
+  text-align: right;
+}
+
+.card .back-image {
+  max-width: 200px;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.items .link-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.items .link-logo svg {
+  width: 40px;
+}
+
+.links-flex {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-flex .buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-button-main {
+  color: #000;
+  background-color: var(--main-color);
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 6px 6px 18px #000000e0;
+}
+
+.card-button-main:hover {
+  background-color: #fff;
+  color: #1d1d1d;
+  transform: scale(1.1);
+}
+
+.uni-button {
+  text-decoration: none;
+  color: #000;
+}
+
+.links {
+  display: flex;
+}
+
+.links a svg {
+  transition: 300ms ease-in-out;
+}
+
+.links a:hover svg {
+  transform: scale(1.1);
+  margin-top: -10px;
+}
+
+.links a:hover svg .logocolor-1,
+.links a:hover svg .qrcolor-1,
+.links a:hover svg .namesvg-1 {
+  fill: #fff;
+}
+
+.bottom-corner {
+  position: absolute;
+  top: 87%;
+  left: 94%;
+  -moz-animation: bounce 1s infinite linear;
+  -webkit-animation: bounce 1s infinite linear;
+  animation: bounce 1s infinite linear;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-moz-keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bottom-corner svg {
+  width: 30px;
+  fill: #dcc29b;
+}
+
+/*svg colors */
+
+.logoblack-1 {
+  fill: #1d1d1d;
+}
+
+svg .logocolor-1,
+svg .qrcolor-1,
+svg .namesvg-1 {
+  fill: #dcc29b;
+  transition: 200ms ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .card {
+    max-height: 350px;
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+  }
+  .card section {
+    max-height: 500px;
+    max-width: 350px;
+  }
+
+  .card .back {
+    flex-direction: column;
+  }
+
+  .links-flex .buttons {
+    flex-wrap: wrap;
+    max-height: 300px;
+  }
+
+  .bottom-corner {
+    top: 85%;
+    left: 88%;
+  }
+}
